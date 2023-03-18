@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- Hoja de estilo -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar de Bootstrap -->
+      <nav class="navbar navbar-expand-lg menu" aria-label="Menu de navegación">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div class="menu-logo">
+              <img src="../assets/logo.png" alt="Logo Ferretería Maxi" />
+            </div>
+          </a>
+          <button
+            class="navbar-toggler text-warning"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-warning"
+                  aria-current="page"
+                  href="../index.html"
+                >
+                  INICIO
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-warning"
+                  aria-current="page"
+                  href="./nosotros.html"
+                >
+                  NOSOTROS
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-warning"
+                  aria-current="page"
+                  href="./productos.html"
+                >
+                  PRODUCTOS
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-warning active"
+                  aria-current="page"
+                  href="#"
+                >
+                  CONTACTO
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-title text-warning">
+        <img src="../assets/logo.png" alt="Logo Ferretería Maxi" />
+        <h1 class="page-title">CONTACTO</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact text-warning">
+        <div class="form-contact">
+          
+          <!-- Form de Bootstrap -->
+          <form class="" action="./respuestaFormulario.html" method="GET">
+            <input
+              class="form-control bg-warning mb-2"
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Indique su nombre"
+            />
+            <input
+              class="form-control bg-warning mb-2"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Correo electrónico"
+            />
+            <textarea
+              class="form-control bg-warning mb-2"
+              name="mensaje"
+              id="mensaje"
+              cols="30"
+              rows="10"
+            ></textarea>
+
+            <input class="btn btn-warning w-100 mb-2" type="submit" value="Enviar" />
+          </form>
+
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="contact-location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.03588251640133!2d-58.633184426861874!3d-34.69793892095871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6da91d3391f%3A0xce5912a68b612a96!2sMaxi%20Ferreter%C3%ADa!5e0!3m2!1ses-419!2sar!4v1675911950801!5m2!1ses-419!2sar"
+            width="500"
+            height="375"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p>
+            No dudes en dudes en visitarnos en nuestro local de lunes a viernes
+            de 09:00 a 19:00 horas
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Dirección: Heredia 127, Rafael Castillo, La Matanza</p>
+      <p>Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- js Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
