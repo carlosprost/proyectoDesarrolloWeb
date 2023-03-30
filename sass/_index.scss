@@ -1,0 +1,42 @@
+/* index.html */
+.titulo {
+  width: map-get($width, 100);
+  background: {
+    color: $principal;
+    image: url("../assets/header.jpg");
+    repeat: no-repeat;
+    size: cover;
+  }
+  @include flex-column(center, center);
+
+  div {
+    width: map-get($width, 100);
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    text-shadow: 2px 3px 5px black;
+
+    h1 {
+      font-size: $h1-pincipal;
+    }
+  }
+}
+
+.product-offer {
+  width: map-get($width, 100);
+  background-color: $bg;
+
+  @include flex-column(center, center);
+
+  .offer-title {
+    font-size: $h1;
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .offer-cards {
+    width: auto;
+    padding: 30px 0;
+    @include grid-columns(1fr);
+  }
+}

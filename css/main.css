@@ -1,13 +1,15 @@
+@charset "UTF-8";
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* configuraciones globales */
 body {
   max-width: 100vw;
   height: 100vh;
-
   font-family: "Roboto", sans-serif;
 }
 
@@ -22,38 +24,61 @@ main {
 footer {
   width: 100%;
   height: 100px;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-/* Menú de navegación */
+/* header */
+.header-title {
+  width: 100%;
+  height: 140px;
+  padding: 150px 10px;
+  background-color: #c90404;
+}
+.header-title img,
+.header-title h1 {
+  display: inline;
+}
+.header-title img {
+  width: 50px;
+}
+.header-title h1 {
+  font-size: 2rem;
+  margin: 10px;
+}
+
+/* Menú */
 .menu {
   width: 100%;
   position: fixed;
   background-color: #c90404;
   z-index: 100;
 }
-
-.menu-logo {
+.menu .menu-logo {
+  width: 30px;
+}
+.menu .menu-logo img {
   width: 30px;
 }
 
-.menu-logo img {
-  width: 30px;
+/* Configuraciòn personalizada de las cards */
+.card-custom {
+  width: 18rem;
 }
 
-/* Titulo */
+/* páginas */
+/* index.html */
 .titulo {
   width: 100%;
-  background-color: #c73333;
+  background-color: #c90404;
   background-image: url("../assets/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .titulo div {
   width: 100%;
   margin: 0 auto;
@@ -61,12 +86,10 @@ footer {
   text-align: center;
   text-shadow: 2px 3px 5px black;
 }
-
 .titulo div h1 {
   font-size: 4rem;
 }
 
-/* index.html */
 .product-offer {
   width: 100%;
   background-color: #444444;
@@ -75,13 +98,11 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .product-offer .offer-title {
   font-size: 2rem;
   padding-top: 40px;
   text-align: center;
 }
-
 .product-offer .offer-cards {
   width: auto;
   padding: 30px 0;
@@ -91,7 +112,6 @@ footer {
 }
 
 /* nosotros.html */
-
 .nosotros {
   width: 100%;
   margin: auto;
@@ -102,7 +122,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .nosotros p {
   width: 75%;
   font-size: 1.3rem;
@@ -110,16 +129,15 @@ footer {
 }
 
 /* productos.html */
-
 .products-gallery {
   width: 100%;
   padding-top: 40px;
   background-color: #444444;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .products-gallery .products-cards {
   width: auto;
   margin: auto;
@@ -130,7 +148,6 @@ footer {
 }
 
 /* contacto.html */
-
 .contact {
   width: 100%;
   background-color: #444444;
@@ -139,26 +156,22 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .contact .form-contact {
   width: 100%;
   padding: 40px 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .contact .form-contact form {
   width: 90%;
 }
-
 .contact .divider {
   width: 70%;
   height: 2px;
-  border: 1px solid #ffff00;
-  margin: 40px auto;
+  margin: 40px 0;
 }
-
 .contact .contact-location {
   width: 100%;
   padding: 20px 0;
@@ -167,11 +180,9 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-.contact-location iframe {
+.contact .contact-location iframe {
   width: 90%;
 }
-
 .contact .contact-location p {
   width: 90%;
   font-size: 1.3rem;
@@ -189,29 +200,24 @@ footer {
   justify-content: center;
   align-items: flex-start;
 }
-
 .cart .cart-title {
   width: 100%;
   padding: 20px;
 }
-
 .cart .cart-title h1 {
   font-size: 2rem;
 }
-
-.table-compra {
+.cart .table-compra {
   width: 100%;
 }
-
-.table-compra h3 {
+.cart .table-compra .table-title h3 {
+  font-size: 1rem;
   padding: 0 20px;
 }
-
-tbody tr td img {
+.cart .table-compra table tbody tr td img {
   width: 30px;
 }
-
-.total-compra {
+.cart .table-compra .table-compra {
   width: 100%;
   height: 100px;
   display: flex;
@@ -219,170 +225,139 @@ tbody tr td img {
   justify-content: center;
   align-items: flex-end;
 }
-
-.total-compra .total {
+.cart .table-compra .table-compra .total {
   width: 100px;
   margin-bottom: 10px;
 }
-
-.total-compra .accion-comprar {
+.cart .table-compra .table-compra .accion-comprar {
   width: 100px;
   height: 100px;
 }
 
 /* respuestaFormulario.html */
-
 .saludo-contacto {
   width: 100%;
   height: 90vh;
   background-color: #444444;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .saludo-contacto p {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   font-size: 1rem;
   text-align: center;
+  animation: text-animation 10s;
+}
+@keyframes text-animation {
+  from {
+    width: 200%;
+    color: #c90404;
+  }
+  to {
+    width: 100%;
+    color: white;
+  }
 }
 
-/* Barra de titulo de la páginas */
-.header-title {
-  width: 100%;
-  height: 140px;
-  padding: 150px 10px;
-  background-color: #c90404;
-}
-
-.header-title img {
-  width: 50px;
-}
-
-.header-title h1 {
-  font-size: 2rem;
-
-  margin: 10px;
-}
-
-.header-title img,
-.header-title h1 {
-  display: inline;
-}
-
-/* Estilos de Tarjetas */
-.card-custom {
-  width: 18rem;
-}
-/* Fin de estilo de tarjetas */
-
+/* Media Queries */
 @media screen and (min-width: 768px) {
   /* index.html */
   .product-offer .offer-cards {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-
   /* productos.html */
   .products-gallery .products-cards {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-
   /* contacto.html */
-
   .contact .form-contact form {
     width: 60%;
   }
-
   /* respuestaFormulario.html */
   .saludo-contacto p {
     font-size: 1.4rem;
   }
-
   /* carrito.html */
   .cart {
     align-items: center;
   }
-
-  .table-compra {
+  .cart .table-compra {
     width: 80%;
   }
 }
-
 @media screen and (min-width: 1024px) {
   /* index.html */
   .product-offer .offer-cards {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
-
   /* productos.html */
   .products-gallery .products-cards {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
-
   /* contacto.html */
-
   .contact .form-contact form {
     width: 70%;
   }
-
-  .contact-location iframe {
+  .contact .contact-location iframe {
     width: 70%;
   }
-
   .contact .contact-location p {
     width: 70%;
   }
 }
-
 @media screen and (min-width: 1200px) {
   /* index.html */
   .product-offer .offer-cards {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
-
   /* productos.html */
   .products-gallery .products-cards {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
-
   /* contacto.html */
-
   .contact {
     flex-direction: row;
   }
-
   .contact .form-contact form {
     width: 60%;
   }
-
   .contact .divider {
     width: 2px;
     height: 500px;
   }
-
-  .contact-location iframe {
+  .contact .contact-location iframe {
     width: 80%;
   }
-
   .contact .contact-location p {
     width: 80%;
   }
-
   /* carrito.html */
   .cart {
     align-items: center;
   }
-
-  .table-compra {
+  .cart .table-compra {
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
-  .table-compra .table-title {
+  .cart .table-compra .table-title {
     width: 100%;
   }
-}
+}/*# sourceMappingURL=main.css.map */

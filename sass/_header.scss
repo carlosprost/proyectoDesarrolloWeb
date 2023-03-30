@@ -1,0 +1,21 @@
+/* header */
+.header-title {
+  width: map-get($width, 100);
+  height: 140px;
+  padding: 150px 10px;
+  background-color: $principal;
+
+  img,
+  h1 {
+    display: inline;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: $h1;
+    margin: 10px;
+  }
+}

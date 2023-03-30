@@ -1,0 +1,39 @@
+/* contacto.html */
+.contact {
+  width: map-get($width, 100);
+  background-color: $bg;
+  @include flex-column(center, center);
+
+  .form-contact {
+    width: map-get($width, 100);
+    padding: 40px 0;
+    @include flex-column(center, center);
+
+    form {
+      width: map-get($width, 90);
+    }
+  }
+
+  .divider {
+    width: map-get($width, 70);
+    height: 2px;
+    margin: 40px 0;
+  }
+
+  .contact-location {
+    width: map-get($width, 100);
+    padding: 20px 0;
+    @include flex-column(center, center);
+
+    iframe {
+      width: map-get($width, 90);
+    }
+
+    p {
+      width: map-get($width, 90);
+      font-size: 1.3rem;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+}

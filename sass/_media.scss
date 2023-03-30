@@ -1,0 +1,134 @@
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  /* index.html */
+  .product-offer {
+    .offer-cards {
+      @include grid-columns(repeat(2, 1fr));
+    }
+  }
+
+  /* productos.html */
+  .products-gallery {
+    .products-cards {
+      @include grid-columns(repeat(2, 1fr));
+    }
+  }
+
+  /* contacto.html */
+
+  .contact {
+    .form-contact {
+      form {
+        width: map-get($width, 60);
+      }
+    }
+  }
+
+  /* respuestaFormulario.html */
+  .saludo-contacto {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  /* carrito.html */
+  .cart {
+    align-items: center;
+
+    .table-compra {
+      width: map-get($width, 80);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* index.html */
+  .product-offer {
+    .offer-cards {
+      @include grid-columns(repeat(3, 1fr));
+    }
+  }
+
+  /* productos.html */
+  .products-gallery {
+    .products-cards {
+      @include grid-columns(repeat(3, 1fr));
+    }
+  }
+
+  /* contacto.html */
+
+  .contact {
+    .form-contact {
+      form {
+        width: map-get($width, 70);
+      }
+    }
+
+    .contact-location {
+      iframe {
+        width: map-get($width, 70);
+      }
+      p {
+        width: map-get($width, 70);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* index.html */
+  .product-offer {
+    .offer-cards {
+      @include grid-columns(repeat(4, 1fr));
+    }
+  }
+
+  /* productos.html */
+  .products-gallery {
+    .products-cards {
+      @include grid-columns(repeat(4, 1fr));
+    }
+  }
+
+  /* contacto.html */
+
+  .contact {
+    flex-direction: row;
+
+    .form-contact {
+      form {
+        width: map-get($width, 60);
+      }
+    }
+
+    .divider {
+      width: 2px;
+      height: 500px;
+    }
+
+    .contact-location {
+      iframe {
+        width: map-get($width, 80);
+      }
+
+      p {
+        width: map-get($width, 80);
+      }
+    }
+  }
+
+  /* carrito.html */
+  .cart {
+    align-items: center;
+
+    .table-compra {
+      width: map-get($width, 80);
+      @include flex-column(center, center);
+
+      .table-title {
+        width: map-get($width, 100);
+      }
+    }
+  }
+}

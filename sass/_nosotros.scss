@@ -1,0 +1,14 @@
+/* nosotros.html */
+.nosotros {
+  width: map-get($width, 100);
+  margin: auto;
+  padding-top: 100px;
+  background-color: $bg;
+  @include flex-column(center, center);
+
+  p {
+    width: map-get($width, 75);
+    font-size: 1.3rem;
+    padding: 30px 0;
+  }
+}

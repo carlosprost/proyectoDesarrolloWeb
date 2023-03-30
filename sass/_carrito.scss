@@ -1,0 +1,55 @@
+/* carrito.html */
+.cart {
+  width: map-get($width, 100);
+  min-height: 90vh;
+  background-color: $bg;
+  @include flex-column(center, flex-start);
+
+  .cart-title {
+    width: map-get($width, 100);
+    padding: 20px;
+
+    h1 {
+      font-size: $h1;
+    }
+  }
+
+  .table-compra {
+    width: map-get($width, 100);
+
+    .table-title {
+      h3 {
+        font-size: $h3;
+        padding: 0 20px;
+      }
+    }
+
+    table {
+      tbody {
+        tr {
+          td {
+            img {
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .table-compra {
+      width: map-get($width, 100);
+      height: 100px;
+      @include flex-column(center, flex-end);
+
+      .total {
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      .accion-comprar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

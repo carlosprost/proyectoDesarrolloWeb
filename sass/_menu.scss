@@ -1,0 +1,15 @@
+/* Menú */
+.menu {
+  width: map-get($width, 100);
+  position: fixed;
+  background-color: $principal;
+  z-index: 100;
+
+  .menu-logo {
+    width: 30px;
+
+    img {
+      width: 30px;
+    }
+  }
+}
