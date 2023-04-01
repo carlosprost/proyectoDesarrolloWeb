@@ -10,6 +10,20 @@
 
     img {
       width: 30px;
+      transform: rotate(0deg);
+      animation: logo-rotacion 2s;
+    }
+
+    @keyframes logo-rotacion {
+      0% {
+        transform: rotate(180deg);
+      }
+      50% {
+        transform: rotate(-270deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
     }
   }
 }

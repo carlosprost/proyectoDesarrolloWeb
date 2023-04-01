@@ -10,16 +10,15 @@
     margin: 0 auto;
     font-size: 1rem;
     text-align: center;
-    animation: text-animation 10s;
-    
+    animation: text-animation 5s;
+
     @keyframes text-animation {
-      from{
-        width: 200%;
-        color: $principal
+      from {
+        font-size: 3rem;
+        color: $principal;
       }
-      to{
-        width: 100%;
-        color: white
+      to {
+        font-size: 1rem;
       }
     }
   }

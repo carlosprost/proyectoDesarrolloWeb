@@ -59,6 +59,19 @@ footer {
 }
 .menu .menu-logo img {
   width: 30px;
+  transform: rotate(0deg);
+  animation: logo-rotacion 2s;
+}
+@keyframes logo-rotacion {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* Configuraciòn personalizada de las cards */
@@ -249,16 +262,15 @@ footer {
   margin: 0 auto;
   font-size: 1rem;
   text-align: center;
-  animation: text-animation 10s;
+  animation: text-animation 5s;
 }
 @keyframes text-animation {
   from {
-    width: 200%;
+    font-size: 3rem;
     color: #c90404;
   }
   to {
-    width: 100%;
-    color: white;
+    font-size: 1rem;
   }
 }
 
